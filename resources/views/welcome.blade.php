@@ -65,6 +65,9 @@
         </style>
     </head>
     <body>
+
+
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -74,9 +77,11 @@
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
                     @endauth
-                </div>
-            @endif
+                        <a class="nav-link" href="/contact">Contact</a>
 
+                </div>
+
+            @endif
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
