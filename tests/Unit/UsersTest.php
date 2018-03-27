@@ -21,5 +21,11 @@ class UsersTest extends TestCase
         $user->password ='tAjBuIlD';
         $this->assertTrue($user->save());
     }
-
+    public function testUpdateUserName()
+    {
+        $user = User::all()->last();
+        $user-> where('name', 'Ram')
+            -> update(['name' => 'Steve Smith']);
+        $this->assertTrue($user->save());
+    }
 }
