@@ -5,7 +5,7 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-
+use App\Car;
 class CarsTest extends TestCase
 {
     /**
@@ -13,8 +13,12 @@ class CarsTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testInsertCar()
     {
-        $this->assertTrue(true);
+        $car = new Car();
+        $car->make ='Tata';
+        $car->model ='XUV';
+        $car->year ='2001';
+        $this->assertTrue($car->save());
     }
 }
