@@ -28,4 +28,10 @@ class UsersTest extends TestCase
             -> update(['name' => 'Steve Smith']);
         $this->assertTrue($user->save());
     }
+
+    public function testDeleteUser()
+    {
+        $user = User::all()->last();
+        $this->assertTrue($user->delete());
+    }
 }
