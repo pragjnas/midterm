@@ -34,4 +34,12 @@ class UsersTest extends TestCase
         $user = User::all()->last();
         $this->assertTrue($user->delete());
     }
+
+    public function testUserCount()
+    {
+        $users = User::all();
+        $usersCount = count($users);
+        $this->assertEquals(50,$usersCount);
+        $this->assertInternalType("int",$usersCount);
+    }
 }
