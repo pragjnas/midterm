@@ -29,4 +29,10 @@ class CarsTest extends TestCase
             -> update(['year' => '2000']);
         $this->assertTrue($car->save());
     }
+
+    public function testDeleteCar()
+    {
+        $car = Car::all()->last();
+        $this->assertTrue($car->delete());
+    }
 }
