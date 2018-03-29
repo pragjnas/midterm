@@ -50,4 +50,11 @@ class CarsTest extends TestCase
         $year = (int) $car->Year;
         $this->assertInternalType("int",$year);
     }
+
+    public function testCarMake()
+    {
+        $car = Car::find(1);
+        $this->assertContains($car->Make, ["honda", "ford", "toyota"]);
+
+    }
 }
