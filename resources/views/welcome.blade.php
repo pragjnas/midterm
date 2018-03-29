@@ -74,12 +74,11 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a class="nav-link" href="/about">About</a>
+                        <a href="{{ route('about') }}">About</a>
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ route('contact') }}">Contact</a>
                     @endauth
-                        <a class="nav-link" href="/contact">Contact</a>
-
                 </div>
 
             @endif
